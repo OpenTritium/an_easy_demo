@@ -1,0 +1,37 @@
+### 创建用户
+POST http://127.0.0.1:7878/api/v1/users
+Content-Type: application/json
+
+{
+  "username": "testuser5",
+  "password": "secretpassword"
+}
+
+### 获取所有用户
+GET http://127.0.0.1:7878/api/v1/users
+
+### 根据ID获取特定用户
+GET http://127.0.0.1:7878/api/v1/users/4a55be1f-4348-4a0f-9d9f-1d3d4f5b6ff2
+
+### 根据用户名获取特定用户
+GET http://127.0.0.1:7878/api/v1/users/username/testuser5
+
+### 验证用户密码
+POST http://127.0.0.1:7878/api/v1/users/4a55be1f-4348-4a0f-9d9f-1d3d4f5b6ff2/password
+Content-Type: application/json
+
+{
+  "sample": "secretpassword"
+}
+
+### 更新用户密码
+PUT http://127.0.0.1:7878/api/v1/users/4a55be1f-4348-4a0f-9d9f-1d3d4f5b6ff2/password
+Content-Type: application/json
+
+{
+  "old_password": "secretpassword",
+  "new_password": "newpassword"
+}
+
+### 删除用户
+DELETE http://127.0.0.1:7878/api/v1/users/4a55be1f-4348-4a0f-9d9f-1d3d4f5b6ff2
