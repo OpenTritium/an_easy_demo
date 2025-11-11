@@ -30,7 +30,8 @@ CREATE TABLE public.users (
 ## 配置
 
 项目使用 `.env` 文件进行配置，需要设置数据库连接：
-需要注意的是，为了方便偷懒就测试和运行都连接的同一个数据库，生产环境不建议这么做。
+
+> 需要注意的是，为了方便偷懒就测试和运行都连接的同一个数据库，生产环境不建议这么做。
 
 ```env
 DATABASE_URL=postgresql://user:password@localhost:port/database_name
@@ -57,4 +58,4 @@ cargo run
 
 服务将在 `127.0.0.1:7878` 上运行。
 
-此外，你可以安装 REST Client 扩展，并使用项目根目录下的 `api-tests.http` 文件进行测试。
+此外，你可以安装 REST Client Vscode 扩展，并使用项目根目录下的 `api-tests.http` 文件进行测试。
